@@ -1,0 +1,14 @@
+# Ignorar carpetas de compilación de Python (como la que viste)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar el entorno virtual (no queremos subir las 200MB de venv)
+venv/
+ENV/
+
+# Archivos de configuración de VS Code (opcional)
+.vscode/
+
+# Bases de datos locales (si usas SQLite de prueba)
+*.db
