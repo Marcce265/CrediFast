@@ -1,4 +1,5 @@
 from views.login_view import LoginView
+from controllers.dashboard_controller import DashboardController
 
 class LoginController:
     def __init__(self):
@@ -22,3 +23,9 @@ class LoginController:
         self.view.destroy() # Cerramos el Login
         print("Cambiando a Dashboard...")
         # Aquí instanciaremos el DashboardController pronto
+    
+    def abrir_dashboard(self):
+        self.view.destroy()  # Cierra el Login
+        dashboard = DashboardController() # Crea el Dashboard
+        dashboard.ejecutar() # Lo lanza
+ 
