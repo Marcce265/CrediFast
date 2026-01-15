@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+__init__.py
 
 # Ignorar el entorno virtual (no queremos subir las 200MB de venv)
 venv/
