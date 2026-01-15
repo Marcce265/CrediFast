@@ -37,3 +37,4 @@ class LoginView(ctk.CTk):
         # Mensaje de error
         self.error_label = ctk.CTkLabel(self.login_card, text="", text_color="#D97652", font=("Segoe UI", 12, "bold"))
         self.error_label.place(relx=0.5, rely=0.7, anchor="center")
+        

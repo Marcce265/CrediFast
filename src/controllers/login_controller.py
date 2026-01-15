@@ -1,5 +1,5 @@
-from views.login_view import LoginView
-from controllers.dashboard_controller import DashboardController
+from src.views.login_view import LoginView
+from src.controllers.dashboard_controller import DashboardController
 
 class LoginController:
     def __init__(self):
@@ -18,14 +18,15 @@ class LoginController:
             self.abrir_dashboard()
         else:
             self.view.error_label.configure(text="Credenciales incorrectas")
-
+            
     def abrir_dashboard(self):
-        self.view.destroy() # Cerramos el Login
-        print("Cambiando a Dashboard...")
-        # Aquí instanciaremos el DashboardController pronto
-    
-    def abrir_dashboard(self):
-        self.view.destroy()  # Cierra el Login
-        dashboard = DashboardController() # Crea el Dashboard
-        dashboard.ejecutar() # Lo lanza
+        # En lugar de destruir la ventana, la ocultamos primero
+        self.view.withdraw() 
+        
+        # Abrimos el dashboard
+        dashboard = DashboardController()
+        dashboard.ejecutar()
+        
+        # Al final, si quieres, destruyes la anterior
+        self.view.quit()
  

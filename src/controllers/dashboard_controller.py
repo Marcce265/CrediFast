@@ -1,4 +1,4 @@
-from views.dashboard_view import DashboardView
+from src.views.dashboard_view import DashboardView
 
 class DashboardController:
     def __init__(self):
